@@ -150,11 +150,6 @@
         transition: background-color 0.3s;
         justify-content: center;
       }
-
-      .social-button:hover {
-        background-color: hsl(75, 94%, 57%);
-        color: hsl(0, 0%, 20%);
-      }
     </style>
   </head>
   <body>
@@ -189,4 +184,19 @@
       >.
     </div>
   </body>
+  <script>
+    const buttons = document.querySelectorAll(".social-button");
+
+    buttons.forEach((button) => {
+      button.addEventListener("mouseover", () => {
+        button.style.backgroundColor = "hsl(75, 94%, 57%)";
+        button.style.color = "hsl(0, 0%, 20%)";
+      });
+
+      button.addEventListener("mouseout", () => {
+        button.style.backgroundColor = "hsl(0, 0%, 20%)";
+        button.style.color = "hsl(0, 0%, 100%)";
+      });
+    });
+  </script>
 </html>
